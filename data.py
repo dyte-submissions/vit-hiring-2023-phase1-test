@@ -130,30 +130,35 @@ COURSES = [
         'name': 'Applied Linear Algebra - Theory',
         'slot_ids': ['A1', 'TA1', 'TAA1', 'A2', 'TA2', 'TAA2'],
         'faculty_ids': [FACULTIES[54], FACULTIES[32], FACULTIES[13]],
+        'course_type': 'THEORY',
     },
     {
         'id': 'MAT2002',
         'name': 'Application of Differential Equations - Theory',
         'slot_ids': ['B1', 'B2'],
         'faculty_ids': [FACULTIES[36], FACULTIES[11], FACULTIES[9]],
+        'course_type': 'THEORY',
     },
     {
         'id': 'MAT2002L',
         'name': 'Application of Differential Equations - Lab',
         'slot_ids': ['L7', 'L8', 'L41', 'L42'],
         'faculty_ids': [FACULTIES[24], FACULTIES[93], FACULTIES[92]],
+        'course_type': 'LAB',
     },
     {
         'id': 'MAT1001',
         'name': 'Calculus - Theory',
         'slot_ids': ['C1', 'TC1', 'C2', 'TC2'],
         'faculty_ids': [FACULTIES[13], FACULTIES[83], FACULTIES[71]],
+        'course_type': 'THEORY',
     },
     {
         'id': 'MAT1001L',
         'name': 'Calculus - Theory',
         'slot_ids': ['L43', 'L44', 'L17', 'L18'],
         'faculty_ids': [FACULTIES[13], FACULTIES[19], FACULTIES[33]],
+        'course_type': 'THEORY',
     },
 ]
 
