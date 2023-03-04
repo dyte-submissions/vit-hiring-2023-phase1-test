@@ -140,7 +140,7 @@ COURSES = [
     {
         'id': 'MAT2002L',
         'name': 'Application of Differential Equations - Lab',
-        'slot_ids': ['L7', 'L8' 'L41', 'L42'],
+        'slot_ids': ['L7', 'L8', 'L41', 'L42'],
         'faculty_ids': [FACULTIES[24], FACULTIES[93], FACULTIES[92]],
     },
     {

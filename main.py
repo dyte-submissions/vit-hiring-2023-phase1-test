@@ -26,7 +26,7 @@ def make_request(path, body=None, access_scope='student', request_type='POST'):
             raise NotImplementedError('Request type was not implemented.')
 
         print(path, body)
-        r = request_function(url(path), body)
+        r = request_function(url(path), body, headers=headers)
         response_data = r.json()
         return [r.status_code, response_data]
     except Exception as e:
@@ -52,7 +52,7 @@ def register_course(body):
 def create_slots():
     for slot in SLOTS:
         create_slot({ "id": slot, "timings": SLOTS[slot]})
-    
+
 def create_faculties():
     for faculty in FACULTIES:
         create_faculty({ "name": faculty })
