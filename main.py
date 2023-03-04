@@ -1,5 +1,6 @@
 import requests
 from data import SLOTS, FACULTIES, COURSES, REGISTER_COURSES
+import json
 
 API_BASE = 'http://localhost:3000'
 STUDENT_AUTH_TOKEN = 'ENTER STUDENT AUTH TOKEN HERE'
@@ -11,6 +12,7 @@ def make_request(path, body=None, access_scope='student', request_type='POST'):
     try:
         headers = {
             'Authorization': '',
+            'Content-Type': 'application/json'
         }
         if access_scope == 'student':
             headers['Authorization'] = STUDENT_AUTH_TOKEN
@@ -26,7 +28,8 @@ def make_request(path, body=None, access_scope='student', request_type='POST'):
             raise NotImplementedError('Request type was not implemented.')
 
         print(path, body)
-        r = request_function(url(path), body, headers=headers)
+        json_body = json.dumps(body)
+        r = request_function(url(path), json_body, headers=headers)
         response_data = r.json()
         return [r.status_code, response_data]
     except Exception as e:
